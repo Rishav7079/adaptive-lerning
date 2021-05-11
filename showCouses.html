@@ -1,0 +1,47 @@
+<head>
+    <style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    </style>
+    </head>
+<h3 style="background-color: rgb(30, 154, 255);color: white;padding: 5px;text-align: center;"> 
+    Courses
+    <p style="text-align:right; font-size: small;"> 
+        <a href="/cms/edit" style="color: white;" >create course</a>
+    </p>
+    <p style="text-align:right; font-size: small;"> 
+        <a href="/cms/edit" style="color: white;" >edit course</a>
+    </p>
+    <p style="text-align:right; font-size: small;"> 
+        <a href="/cms/edit" style="color: white;" >delete course course</a>
+    </p>
+    <p style="text-align:right; font-size: small;"> 
+        <a href="/cms/edit" style="color: white;" >delete course course</a>
+    </p>
+</h3>
+<div style="font-size: 11px;">
+    <table style=" border: 1px solid black; width:100%;">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>course_name</th>
+                <th>course_code</th>
+                <th>credits</th>
+                <th>is_live</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%for entry in postInventoryUpdateDetails %}
+                <tr style = "text-align:center;">
+                    <td>{{ entry.id }}</td>
+                    <td>{{ entry.course_name}}</td>
+                    <td>{{ entry.course_code}}</td>
+                    <td>{{ entry.credits}}</td>
+                    <td>{{ entry.is_live}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
